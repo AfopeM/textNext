@@ -30,14 +30,18 @@ export default function Home({ newsArticles }: BreakingNewsPageProps) {
         <title>Breaking News - NextJS</title>
       </Head>
       <main>
-        <div className="flex flex-col items-center pb-8">
+        <div className="flex flex-col items-center pb-8 text-center">
           <Link href="/search">Go to Search page</Link>
-          <h1 className="text-center text-4xl uppercase text-slate-700">
-            Breaking-News
-          </h1>
+          <h1 className="text-4xl uppercase text-blue-700">Breaking-News</h1>
+          <p className="px-20 pt-4">
+            This page uses{" "}
+            <span className="font-black">getServerSidePropsx</span> to fetch
+            data sever-side on every request. This allows search engines to
+            crawl the page content and{" "}
+            <span className="font-black">improves SEO</span>.
+          </p>
         </div>
         {/* {JSON.stringify(newsArticles)} */}
-        {/* <NewsArticleEntry article={newsArticles[5]} /> */}
         <NewsArticlesGrid articles={newsArticles} />
       </main>
     </>
